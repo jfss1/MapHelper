@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">CM</string>
+    <string name="app_name">MapHelper</string>
+    <string name="putEmail">Put your email address</string>
+    <string name="putPassword">Put your password</string>
 </resources>
