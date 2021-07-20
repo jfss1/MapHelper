@@ -2,4 +2,9 @@
     <string name="app_name">MapHelper</string>
     <string name="putEmail">Put your email address</string>
     <string name="putPassword">Put your password</string>
+    <string name="putTitle">Put the title</string>
+    <string name="putContent">Content</string>
+    <string name="newNote">New Note</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
 </resources>
