@@ -50,7 +50,7 @@ class Anotacao : AppCompatActivity(), NotaAdapter.OnItemClickListener {
         if (requestCode == newNoteActivityRequestCode && resultCode == Activity.RESULT_OK) {
 
             data?.getStringExtra(NewNota.EXTRA_REPLY)?.let {
-                var d = data.getStringExtra("description")
+                var d = data.getStringExtra("descricao")
                 // NOTA POR ALGUM MOTIVO AO CRIAR AS NOTAS ELE ESTA A TROCAR A DESCRICAO PELO TITUTLO
                 if (d != null) {
                     val nota = Nota(titulo = it, descricao = d)
