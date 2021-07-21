@@ -9,14 +9,30 @@ import androidx.recyclerview.widget.RecyclerView
 import intro.android.cm.R
 import intro.android.cm.entities.Nota
 
-class NotaAdapter internal constructor(
-        context: Context
-): RecyclerView.Adapter<NotaAdapter.NotaViewHolder>(){
+class NotaAdapter internal constructor(context: Context, private val listener: OnItemClickListener): RecyclerView.Adapter<NotaAdapter.NotaViewHolder>(){
     private val inflater : LayoutInflater = LayoutInflater.from(context)
     private var notas = emptyList<Nota>()
 
-    class NotaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
-        val notaItemView: TextView = itemView.findViewById(R.id.TextView)
+    inner class NotaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
+            View.OnClickListener {
+
+        val notesItemView: TextView = itemView.findViewById(R.id.textView_Recycler_item)
+
+        init {
+            itemView.setOnClickListener(this)
+        }
+
+        override fun onClick(v: View?) {
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                val current = notas[position]
+                listener.onItemClick(current.id,current.titulo, current.descricao)
+            }
+        }
+    }
+
+    interface OnItemClickListener{
+        fun onItemClick(id:Int?, titulo:String, descricao:String)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotaViewHolder {
@@ -26,7 +42,7 @@ class NotaAdapter internal constructor(
 
     override fun onBindViewHolder(holder: NotaViewHolder, position: Int) {
         val current = notas[position]
-        holder.notaItemView.text = current.titulo
+        holder.notesItemView.text = current.titulo
     }
 
     internal fun setNotas(notas: List<Nota>){

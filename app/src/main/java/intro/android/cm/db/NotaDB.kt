@@ -43,8 +43,10 @@ public abstract class NotaDB: RoomDatabase() {
                         context.applicationContext,
                         NotaDB::class.java,
                         "notas_database"
-                ).addCallback(WordDatabaseCallback(scope))
-                        .build()
+                )
+                //.fallbackToDestructiveMigration()//LIMPAR base de dados
+                .addCallback(WordDatabaseCallback(scope))
+                .build()
 
                 INSTANCE = instance
                 return instance

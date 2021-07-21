@@ -7,4 +7,10 @@
     <string name="newNote">New Note</string>
     <string name="cancel">Cancel</string>
     <string name="confirm">Confirm</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="empty_not_saved">Note not saved, because is empty.</string>
+    <string name="Deleted_Note">Delete Note</string>
+    <string name="edited_note">Note has been edited</string>
+    <string name="button_save">Save</string>
 </resources>
