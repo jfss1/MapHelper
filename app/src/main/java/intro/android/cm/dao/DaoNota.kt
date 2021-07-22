@@ -7,31 +7,27 @@ import intro.android.cm.entities.Nota
 @Dao
 interface DaoNota {
 
+    @Query("SELECT * FROM note_table ORDER BY title ASC")
+    fun getAllNotes(): LiveData<List<Nota>>
+
+    @Query("SELECT * FROM note_table WHERE title ==:title")
+    fun getTitleFromNotes(title:String):LiveData<Nota>
+
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insert(nota: Nota)
+    suspend fun insert(title: Nota)
 
-    @Query("SELECT * FROM NOTA_TABLE ORDER BY TITULO ASC")
-    fun getAllNotasOrder(): LiveData<List<Nota>>
-
-    @Query("SELECT * FROM NOTA_TABLE WHERE TITULO == :titulo" )
-    suspend fun getFromTitulo(titulo: String) : LiveData<Nota>
-
-    @Update
-    suspend fun updateNota(nota: Nota)
-
-    @Query("UPDATE NOTA_TABLE SET TITULO = :titulo AND DESCRICAO = :descricao WHERE ID == :id")
-    suspend fun updateFromID(id: Int?, titulo: String, descricao: String)
-
-    @Query("UPDATE NOTA_TABLE SET DESCRICAO = :descricao WHERE TITULO == :titulo")
-    suspend fun updateFromTitle(titulo: String, descricao: String)
-
-    @Query("DELETE FROM NOTA_TABLE ")
+    @Query("DELETE FROM note_table")
     suspend fun deleteAll()
 
-    @Query("DELETE FROM NOTA_TABLE WHERE TITULO == :titulo")
-    suspend fun deleteFromTitulo(titulo: String)
+    @Query("DELETE FROM note_table WHERE title == :title")
+    suspend fun deleteByTittle(title:String)
 
+    @Update
+    suspend fun updateNote(title:Nota)
 
+    @Query("UPDATE note_table SET description=:description WHERE title ==:title")
+    suspend fun updateDescriptionFromTitle(title: String,description: String)
 
-
+    @Query("UPDATE note_table SET description=:description , title=:title WHERE id ==:id")
+    suspend fun updateNoteFromId(id:Int,title: String,description: String)
 }

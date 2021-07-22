@@ -1,34 +1,41 @@
 package intro.android.cm.db
 
+import androidx.annotation.WorkerThread
 import androidx.lifecycle.LiveData
 import intro.android.cm.dao.DaoNota
 import intro.android.cm.entities.Nota
 
 class NotaRepository(private val daoNota: DaoNota) {
-    val allnotas: LiveData<List<Nota>> = daoNota.getAllNotasOrder()
 
-    suspend fun getNotasFromTitulo(titulo: String): LiveData<Nota>{
-        return daoNota.getFromTitulo(titulo)
+    val allNotes: LiveData<List<Nota>> = daoNota.getAllNotes()
+
+    fun getTitleFromNotes(title:String): LiveData<Nota> {
+        return daoNota.getTitleFromNotes(title)
     }
 
-    suspend fun insert(nota: Nota){
-        daoNota.insert(nota);
+    @Suppress("RedundantSuspendModifier")
+    @WorkerThread
+    suspend fun insert(city: Nota) {
+        daoNota.insert(city)
     }
 
-    suspend fun deleteAll(){
+    suspend fun deleteAll() {
         daoNota.deleteAll()
     }
 
-    suspend fun deleteFromTitulo(titulo: String){
-        daoNota.deleteFromTitulo(titulo)
+    suspend fun deleteByTittle(title: String) {
+        daoNota.deleteByTittle(title)
     }
 
-    suspend fun updateNotasFromID(id:Int?, titulo: String, descricao: String){
-        daoNota.updateFromID(id,titulo,descricao)
+    suspend fun updateNote(title: Nota) {
+        daoNota.updateNote(title)
+    }
+    suspend fun updateNoteFromId(id:Int,title: String, description: String) {
+        daoNota.updateNoteFromId(id,title,description)
     }
 
-    suspend fun updateDescricaoFromTitulo(titulo: String, descricao: String){
-        daoNota.updateFromTitle(titulo, descricao)
+    suspend fun updateDescriptionFromTitle(title: String, description: String) {
+        daoNota.updateDescriptionFromTitle(title,description)
     }
 
 

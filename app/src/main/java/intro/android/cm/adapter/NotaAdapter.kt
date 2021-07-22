@@ -9,15 +9,21 @@ import androidx.recyclerview.widget.RecyclerView
 import intro.android.cm.R
 import intro.android.cm.entities.Nota
 
-class NotaAdapter internal constructor(context: Context, private val listener: OnItemClickListener): RecyclerView.Adapter<NotaAdapter.NotaViewHolder>(){
-    private val inflater : LayoutInflater = LayoutInflater.from(context)
-    private var notas = emptyList<Nota>()
+class NotaAdapter internal constructor(
+    context: Context,
+    private val listener: OnItemClickListener
+) : RecyclerView.Adapter<NotaAdapter.NotesViewHolder>() {
 
-    inner class NotaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
-            View.OnClickListener {
+
+    private val inflater: LayoutInflater = LayoutInflater.from(context)
+    private var notes = emptyList<Nota>()
+
+    inner class NotesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
+        View.OnClickListener {
 
         val notesItemView: TextView = itemView.findViewById(R.id.textView_Recycler_item)
 
+        // isto serve para dar um onClick aos items da lista
         init {
             itemView.setOnClickListener(this)
         }
@@ -25,30 +31,35 @@ class NotaAdapter internal constructor(context: Context, private val listener: O
         override fun onClick(v: View?) {
             val position = adapterPosition
             if (position != RecyclerView.NO_POSITION) {
-                val current = notas[position]
-                listener.onItemClick(current.id,current.titulo, current.descricao)
+                val current = notes[position]
+                listener.onItemClick(current.id,current.title, current.description)
             }
         }
     }
+    // esta interface e a maneira como cominamos com a activity principal
+    interface OnItemClickListener {
+        // todos estes parametros sao os parametros enviados para a actividade principal
+        fun onItemClick(id:Int?,title: String,description:String)
 
-    interface OnItemClickListener{
-        fun onItemClick(id:Int?, titulo:String, descricao:String)
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotaViewHolder {
-        val itemView = inflater.inflate(R.layout.recyclerview_item, parent,false)
-        return NotaViewHolder(itemView)
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotesViewHolder {
+        val itemView = inflater.inflate(R.layout.recyclerview_item, parent, false)
+        return NotesViewHolder(itemView)
     }
 
-    override fun onBindViewHolder(holder: NotaViewHolder, position: Int) {
-        val current = notas[position]
-        holder.notesItemView.text = current.titulo
+    override fun onBindViewHolder(holder: NotesViewHolder, position: Int) {
+        val current = notes[position]
+        holder.notesItemView.text =
+            current.title
     }
 
-    internal fun setNotas(notas: List<Nota>){
-        this.notas = notas
+    internal fun setNotes(notes: List<Nota>) {
+        this.notes = notes
         notifyDataSetChanged()
     }
 
-    override fun getItemCount() = notas.size
+
+    override fun getItemCount() = notes.size
 }

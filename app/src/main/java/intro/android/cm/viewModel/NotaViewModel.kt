@@ -13,32 +13,33 @@ import kotlinx.coroutines.launch
 class NotaViewModel(application: Application) : AndroidViewModel(application){
 
     private val repository: NotaRepository
-    val allNotas: LiveData<List<Nota>>
+    val allNotes: LiveData<List<Nota>>
 
     init {
-        val notaDao = NotaDB.getDatabase(application, viewModelScope).notaDao()
-        repository = NotaRepository(notaDao)
-        allNotas = repository.allnotas
+        val notesDao = NotaDB.getDatabase(application, viewModelScope).NotesDao()
+        repository = NotaRepository(notesDao)
+        allNotes= repository.allNotes
     }
 
-    fun insert(nota: Nota) = viewModelScope.launch {
-        repository.insert(nota)
+    fun insert(notes:Nota) = viewModelScope.launch {
+        repository.insert(notes)
+    }
+    fun deleteAll()= viewModelScope.launch(Dispatchers.IO){repository.deleteAll()}
+
+    fun deleteByTittle(city: String )= viewModelScope.launch(Dispatchers.IO){
+        repository.deleteByTittle(city)
     }
 
-    fun deleteAll() = viewModelScope.launch(Dispatchers.IO) {
-        repository.deleteAll()
+    fun updateNote(notes:Nota)= viewModelScope.launch(Dispatchers.IO){
+        repository.updateNote(notes)
     }
 
-    fun deleteFromTitulo(titulo: String) = viewModelScope.launch(Dispatchers.IO) {
-        repository.deleteFromTitulo(titulo)
-    }
+    fun updateNoteFromId(id:Int, title: String,description: String)=viewModelScope.launch(Dispatchers.IO){
+        repository.updateNoteFromId(id,title,description)}
 
-    fun updateNotaFromID(id:Int?, titulo: String, descricao: String) = viewModelScope.launch(Dispatchers.IO) {
-        repository.updateNotasFromID(id, titulo, descricao)
-    }
+    fun updateDescriptionFromTitle(title: String,description: String)=viewModelScope.launch(Dispatchers.IO){
+        repository.updateDescriptionFromTitle(title,description)}
 
-    fun updateDescricaoFromTitulo(titulo: String, descricao: String) = viewModelScope.launch(Dispatchers.IO) {
-        repository.updateDescricaoFromTitulo(titulo, descricao)
-    }
+
 
 }

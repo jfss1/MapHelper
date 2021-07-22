@@ -29,9 +29,6 @@
         android:hint="@string/putEmail"
         android:inputType="textEmailAddress"
         android:textColor="@color/black"
-        android:textColorHighlight="@color/grey"
-        android:textColorHint="@color/grey"
-        android:textColorLink="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appName" />
@@ -46,9 +43,6 @@
         android:hint="@string/putPassword"
         android:inputType="textPassword"
         android:textColor="@color/black"
-        android:textColorHighlight="@color/grey"
-        android:textColorHint="@color/grey"
-        android:textColorLink="@color/grey"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailInput" />
