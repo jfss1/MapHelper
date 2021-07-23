@@ -51,7 +51,6 @@ class Anotacao : AppCompatActivity(), NotaAdapter.OnItemClickListener {
 
             data?.getStringExtra(NewNota.EXTRA_REPLY)?.let {
                 var d = data.getStringExtra("description")
-                // NOTA POR ALGUM MOTIVO AO CRIAR AS NOTAS ELE ESTA A TROCAR A DESCRICAO PELO TITUTLO
                 if (d != null) {
                     val note = Nota(title = it, description = d)
                     noteViewModel.insert(note)

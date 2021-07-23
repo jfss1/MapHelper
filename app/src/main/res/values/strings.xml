@@ -13,4 +13,11 @@
     <string name="Deleted_Note">Delete Note</string>
     <string name="edited_note">Note has been edited</string>
     <string name="button_save">Save</string>
+    <string name="username">username</string>
+    <string name="password">Password</string>
+    <string name="Login">Login</string>
+    <string name="Loggedin">Remain Logged in</string>
+    <string name="Register">Register</string>
+    <string name="login_Error">Invalid user/pass</string>
+    <string name="Sucess_Register">Register finished</string>
 </resources>

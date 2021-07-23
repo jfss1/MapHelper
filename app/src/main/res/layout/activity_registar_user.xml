@@ -4,16 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/lightgrey"
-
+    tools:context=".RegistarUser"
     android:orientation="vertical">
 
 
 
 
     <EditText
-        android:id="@+id/usernameEditText"
+        android:id="@+id/registerUsernameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -24,7 +22,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/passwordEditText"
+        android:id="@+id/registerPasswordEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -34,31 +32,26 @@
         android:minHeight="16dp"
         android:textSize="18sp" />
 
-    <CheckBox
-        android:id="@+id/checkBox_LoggedIn"
+    <EditText
+        android:id="@+id/registerEmailEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="@string/Loggedin" />
+        android:fontFamily="sans-serif-light"
+        android:hint="Email"
+        android:inputType="textAutoComplete"
+        android:minHeight="16dp"
+        android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/button_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="@string/Login"
-        android:onClick="login"
-        />
 
     <Button
         android:id="@+id/button_registar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/button_login"
         android:layout_margin="16dp"
-        android:onClick="registeUser"
+        android:layout_alignLeft="@id/button_login"
         android:text="@string/Register"
-
+        android:onClick="register"
         />
 
 
