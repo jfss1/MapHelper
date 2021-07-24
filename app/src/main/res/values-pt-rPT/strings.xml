@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MapHelper</string>
+    <string name="button_save">Gravar</string>
+    <string name="add_note">Adicionar nota</string>
+    <string name="edit_note">Editar Nota</string>
+    <string name="title_activity_maps">Mapa</string>
+    <string name="signature_title">Sua assinatura</string>
+    <string name="sync_header">Sincronizar</string>
+    <string name="messages_header">Mensagens</string>
+    <string name="title_activity_settings">ActividadeDefinicoes</string>
+    <string name="empty_not_saved">Nota nao foi gravada porque estava vazia</string>
+    <string name="hint_word">Titulo</string>
+    <string name="delete_note">Apagar Nota</string>
+    <string name="username">Nome de Utilizador</string>
+    <string name="Loggedin">Mantar Sessão Iniciada</string>
+    <string name="Login">Entrar</string>
+    <string name="Register">Registar</string>
+    <string name="login_Error">Credenciais invalidas</string>
+    <string name="EmptyFields">Campos vazios. por favor encha os com o seu nome de utilizador e password</string>
+    <string name="welcome">Bem vindo !</string>
+    <string name="Register_Success">Registado com sucesso</string>
+    <string name="filter">Perto</string>
+    <string name="PersonalNotes">Notas pessoais</string>
+    <string name="Settings">Definições</string>
+    <string name="Logout">Sair</string>
+    <string name="Edit_error">Não pode editar essa nota</string>
+    <string name="Edit_note">Editar Nota</string>
+    <string name="Delete_note">Apagar Nota</string>
+    <string name="MyReports">Minhas reportagens</string>
+    <string name="edited_note">Nota foi editada</string>
+    <string name="Deleted_Note">Nota foi apagada</string>
+    <string name="Sucess_Register">Registado com sucesso</string>
+    <string name="Loading_Notes">A carregar todas as notas</string>
+    <string name="Filter_Users">A Mostrar os marcadores do utilizador</string>
+    <string name="Filter">A mostrar os Marcadores mais proximos</string>
+    <string name="No_Changes">Nenhuma alteração foi feita</string>
+    <string name="Map">Mapa</string>
+    <string name="annotation">Anotação</string>
+</resources>
