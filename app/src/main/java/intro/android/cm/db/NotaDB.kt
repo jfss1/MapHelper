@@ -25,9 +25,9 @@ public abstract class NotaDB: RoomDatabase() {
                 // Codigo da professora comentado no video
                 //delete all content here
                 // AppDao.deleteAll()
-                // Add sample words
-                var note= Nota(1,"Buraco ","Existe um buraco na estrada da abelheira")
-                notesDao.insert(note)
+                // PARA ADICIONAR UM TESTE, DESCOMENTA AS LINHAS ABAIXO
+                //var note= Nota(1,"Buraco ","Existe um buraco na estrada da abelheira")
+                //notesDao.insert(note)
 
 
             }}

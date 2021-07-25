@@ -41,7 +41,7 @@ class ReportNoteActivity : AppCompatActivity() {
         editDescriptionView = findViewById(R.id.edit_description)
 
         shared_preferences = getSharedPreferences("shared_preferences", Context.MODE_PRIVATE)
-        // utilizar orecolher coordenadas de x em x tempo para ter a localizacao exata aqui nesta atividade
+        // utilizar o recolher coordenadas de x em x tempo para ter a localizacao exata aqui nesta atividade
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
         locationCallback= object : LocationCallback(){
@@ -131,7 +131,7 @@ class ReportNoteActivity : AppCompatActivity() {
     private fun createLocationRequest() {
         locationRequest = LocationRequest()
 
-        locationRequest.interval = 10000
+        locationRequest.interval = 10000//milissegundos
         locationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
     }
     // on p[ause e on resume servem para parar e resumir respetivamente o check da localizacao de modo a poupar recursos do telemovel

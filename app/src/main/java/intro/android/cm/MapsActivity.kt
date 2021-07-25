@@ -32,6 +32,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 //atribuir strings aos que faltam(LEMBRAR)
+@Suppress("DEPRECATION")
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWindowClickListener {
 
     private lateinit var mMap: GoogleMap
@@ -137,7 +138,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWi
                                     position.longitude,
                                     lastLocation.latitude,
                                     lastLocation.longitude
-                                ) < 1000
+                                ) < 1000//metros
                             ) {
                                 if (nota.id_utilizador == id_user) {
                                     mMap.addMarker(
@@ -208,7 +209,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, GoogleMap.OnInfoWi
         }
 
 
-// para dar reset e limpar o mMap e correr a primeira call de novo
+        // para dar reset e limpar o mMap e correr a primeira call de novo
         val buttonReset = findViewById<Button>(R.id.buttonReset)
         buttonReset.setOnClickListener {
             resetMap()

@@ -31,7 +31,7 @@ class RegistarUser : AppCompatActivity() {
 
     }
 
-// funcao que efetua o login
+    // funcao que efetua o registar
 
     fun register(view: View) {
         // primeiro verifica se os edit estapo prenchidos

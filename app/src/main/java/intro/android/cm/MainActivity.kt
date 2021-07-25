@@ -37,7 +37,7 @@ class MainActivity : AppCompatActivity() {
 
 
         shared_preferences = getSharedPreferences("shared_preferences", Context.MODE_PRIVATE)
-// esta variavel serve para a aplicacao guardar a sessao do utilizador
+        // esta variavel serve para a aplicacao guardar a sessao do utilizador
         loggedIn = shared_preferences.getBoolean("loggedIn", false)
 
         if (loggedIn) {
@@ -57,7 +57,7 @@ class MainActivity : AppCompatActivity() {
         startActivity(intent);
     }
 
-// funcao que efetua o login
+    // funcao que efetua o login
 
     fun login(view: View) {
         // primeiro verifica se os edit estapo prenchidos

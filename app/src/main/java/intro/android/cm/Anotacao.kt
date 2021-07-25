@@ -124,6 +124,7 @@ class Anotacao : AppCompatActivity(), NotaAdapter.OnItemClickListener {
 
     }
 
+    //Logout
     fun onClickLogin(view: View){
         val shared_preferences_edit: SharedPreferences.Editor =
                 shared_preferences.edit()
