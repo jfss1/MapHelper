@@ -35,8 +35,7 @@
     <string name="prompt_password" translatable="false">Password</string>
     <string name="welcome">"Welcome !"</string>
     <string name="Register_Success">Registration successful</string>
-    <string name="filter">Closer</string>
-    <string name="reset" translatable="false">Reset</string>
+    <string name="filter" translatable="true">Closer</string>
     <string name="PersonalNotes">Personal Notes</string>
     <string name="Settings">Settings</string>
     <string name="Logout">Logout</string>
@@ -61,5 +60,6 @@
     <string name="question">You don\'t have an account?</string>
     <string name="Selectednote">Selected Note</string>
     <string name="EditReport">Edit Report</string>
+    <string name="reset">reset</string>
 
 </resources>

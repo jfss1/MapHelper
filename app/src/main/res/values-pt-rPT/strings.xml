@@ -44,4 +44,5 @@
     <string name="question">Não tens conta?</string>
     <string name="Selectednote">Nota Selecionada</string>
     <string name="EditReport">Editar Relatório</string>
+    <string name="reset">Limpar</string>
 </resources>
