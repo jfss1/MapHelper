@@ -1,7 +1,9 @@
 package intro.android.cm
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -22,6 +24,7 @@ class Anotacao : AppCompatActivity(), NotaAdapter.OnItemClickListener {
     private lateinit var noteViewModel: NotaViewModel
     private val newNoteActivityRequestCode = 1
     private val editNoteActivityRequestCode = 2
+    private lateinit var shared_preferences: SharedPreferences
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,7 +35,7 @@ class Anotacao : AppCompatActivity(), NotaAdapter.OnItemClickListener {
         val adapter = NotaAdapter(this, this)
         recyclerView.adapter = adapter
         recyclerView.layoutManager = LinearLayoutManager(this)
-
+        shared_preferences = getSharedPreferences("shared_preferences", Context.MODE_PRIVATE)
 
         noteViewModel = ViewModelProvider(this).get(NotaViewModel::class.java)
         noteViewModel.allNotes.observe(this) { notes -> notes?.let { adapter.setNotes(it) } }
@@ -47,6 +50,16 @@ class Anotacao : AppCompatActivity(), NotaAdapter.OnItemClickListener {
         val buttonMap = findViewById<Button>(R.id.button_map)
         buttonMap.setOnClickListener{
             val intent = Intent(this, MapsActivity::class.java)
+            startActivity(intent)
+        }
+
+        val buttonLogin = findViewById<Button>(R.id.button_login1)
+        buttonLogin.setOnClickListener{
+            val shared_preferences_edit: SharedPreferences.Editor =
+                    shared_preferences.edit()
+            shared_preferences_edit.putBoolean("loggedIn", false)
+            shared_preferences_edit.apply()
+            var intent = Intent(this,MainActivity::class.java)
             startActivity(intent)
         }
 
@@ -109,6 +122,15 @@ class Anotacao : AppCompatActivity(), NotaAdapter.OnItemClickListener {
         // aqui comeca a atividade selectedNote com o codigo = 2
         startActivityForResult(intent, editNoteActivityRequestCode)
 
+    }
+
+    fun onClickLogin(view: View){
+        val shared_preferences_edit: SharedPreferences.Editor =
+                shared_preferences.edit()
+        shared_preferences_edit.putBoolean("loggedIn", false)
+        shared_preferences_edit.apply()
+        var intent = Intent(this,MainActivity::class.java)
+        startActivity(intent)
     }
 
 

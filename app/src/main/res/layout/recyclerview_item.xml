@@ -8,8 +8,9 @@
         android:id="@+id/textView_Recycler_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/purple_200"
         android:layout_marginBottom="10dp"
-        />
+        android:background="@color/buttonLabel"
+        android:textColor="@color/orange"
+        android:textSize="18sp" />
 </LinearLayout>
 

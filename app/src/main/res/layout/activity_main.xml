@@ -4,12 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/lightgrey"
+    android:background="@color/orange"
+    android:orientation="vertical"
 
-    android:orientation="vertical">
-
-
+    tools:context=".MainActivity">
 
 
     <EditText
@@ -21,6 +19,7 @@
         android:hint="@string/username"
         android:inputType="textAutoComplete"
         android:minHeight="16dp"
+        android:textColor="@color/buttonLabel"
         android:textSize="18sp" />
 
     <EditText
@@ -32,6 +31,7 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:minHeight="16dp"
+        android:textColor="@color/buttonLabel"
         android:textSize="18sp" />
 
     <CheckBox
@@ -39,16 +39,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="@string/Loggedin" />
+        android:text="@string/Loggedin"
+        android:textColor="@color/buttonLabel" />
 
     <Button
         android:id="@+id/button_login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="@string/Login"
         android:onClick="login"
-        />
+        android:text="@string/Login"
+        android:textColor="@color/orange"
+        app:backgroundTint="@color/buttonLabel" />
+
+    <TextView
+        android:id="@+id/registerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="@string/question"
+        android:textColor="@color/buttonLabel"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/button_registar"
@@ -59,7 +70,8 @@
         android:onClick="registeUser"
         android:text="@string/Register"
 
-        />
+        android:textColor="@color/orange"
+        app:backgroundTint="@color/buttonLabel" />
 
 
 </LinearLayout>

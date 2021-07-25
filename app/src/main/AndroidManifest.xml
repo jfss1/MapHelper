@@ -16,8 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CM">
-        <activity android:name=".EditMapNoteActivity"></activity>
-        <activity android:name=".ReportNoteActivity" />
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -31,12 +30,27 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".EditMapNoteActivity"
+            android:label="@string/EditReport"
+            />
+        <activity
+            android:name=".ReportNoteActivity"
+            android:label="@string/report"
+            />
+        <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".RegistarUser" />
-        <activity android:name=".SelectedNota" />
-        <activity android:name=".NewNota" />
-        <activity android:name=".Anotacao" />
+        <activity
+            android:name=".RegistarUser"
+            android:label="@string/Register"/>
+        <activity
+            android:name=".SelectedNota"
+            android:label="@string/Selectednote"/>
+        <activity
+            android:name=".NewNota"
+            android:label="@string/add_note"/>
+        <activity android:name=".Anotacao"
+            android:label="@string/PersonalNotes"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

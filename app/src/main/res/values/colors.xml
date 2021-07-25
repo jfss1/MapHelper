@@ -10,4 +10,8 @@
     <color name="buttonLabel">#FFFFFF</color>
     <color name="lightgrey">#FFBBBBBB</color>
     <color name="darkgrey">#FF222222</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FF9800</color>
+    <color name="orange2">#FDC065</color>
+    <color name="green">#00FF00</color>
 </resources>

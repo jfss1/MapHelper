@@ -5,74 +5,83 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200"
-    >
+    android:background="@color/orange">
 
     <fragment
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
         android:layout_height="344dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="115dp"
         tools:context=".MapsActivity" />
 
     <TextView
         android:id="@+id/textViewMapsCoordenadas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:background="@color/purple_500"
+        android:layout_marginTop="0dp"
+        android:background="@color/orange2"
         android:padding="20dp"
-        android:layout_alignTop="@id/map"
-        android:layout_marginTop="-130dp"
-        android:textColor="@color/white"
-        android:text="TextView" />
-
+        android:text="TextView"
+        android:textColor="@color/darkgrey" />
 
 
     <Button
         android:id="@+id/buttonFiltrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/map"
-        android:layout_marginTop="-50dp"
+        android:layout_below="@+id/textViewMapsCoordenadas"
         android:layout_alignRight="@id/map"
-        android:text="filter" />
+        android:layout_marginTop="5dp"
+        android:text="filter"
+        android:textColor="@color/orange"
+        app:backgroundTint="@color/buttonLabel" />
 
     <Button
         android:id="@+id/buttonFiltrarUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/map"
-        android:layout_marginTop="-50dp"
+        android:layout_below="@+id/textViewMapsCoordenadas"
         android:layout_centerHorizontal="true"
-        android:text="my reports" />
+        android:layout_marginTop="5dp"
+        android:text="my reports"
+        android:textColor="@color/orange"
+        app:backgroundTint="@color/buttonLabel" />
 
     <Button
         android:id="@+id/buttonReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/map"
-        android:layout_marginTop="-50dp"
-        android:text="reset" />
-
+        android:layout_below="@+id/textViewMapsCoordenadas"
+        android:layout_marginTop="5dp"
+        android:text="reset"
+        android:textColor="@color/orange"
+        app:backgroundTint="@color/buttonLabel" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/buttonReportar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_alignBottom="@id/map"
         android:layout_alignRight="@id/map"
-        android:src="@drawable/ic_baseline_add_24"/>
+        android:layout_alignBottom="@id/map"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:backgroundTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button_annotation"
-        android:layout_width="182dp"
-        android:layout_height="55dp"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@+id/map"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -80,12 +89,14 @@
         android:layout_marginLeft="2dp"
         android:layout_marginTop="0dp"
         android:onClick="onClickAnotacao"
-        android:text="@string/annotation" />
+        android:text="@string/annotation"
+        android:textColor="@color/orange"
+        app:backgroundTint="@color/buttonLabel" />
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="184dp"
-        android:layout_height="55dp"
+        android:id="@+id/button_login1"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
         android:layout_below="@+id/map"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
@@ -97,7 +108,9 @@
         android:layout_toEndOf="@+id/button_annotation"
         android:layout_toRightOf="@+id/button_annotation"
         android:onClick="onClickLogin"
-        android:text="@string/Logout" />
+        android:text="@string/Logout"
+        android:textColor="@color/orange"
+        app:backgroundTint="@color/buttonLabel" />
 
 
 </RelativeLayout>

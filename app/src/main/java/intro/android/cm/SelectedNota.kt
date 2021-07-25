@@ -28,7 +28,6 @@ class SelectedNota : AppCompatActivity() {
 // utilizar a actividade de criar notas para alterar a nota toda???
         TitleView.text = ogTitle
         DescriptionView.text = ogDesc
-        Log.v("***debug", ogDesc)
         val buttonEdit = findViewById<Button>(R.id.buttonEditNote)
         buttonEdit.setOnClickListener {
             val title = TitleView.text.toString()

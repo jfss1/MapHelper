@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MapHelper</string>
+    <string name="app_name" translatable="false">MapHelper</string>
     <string name="hint_word">Title</string>
     <string name="button_save">Save</string>
     <string name="empty_not_saved">Note not saved because it is empty.</string>
@@ -53,4 +53,13 @@
     <string name="No_Changes">No changes have been made</string>
     <string name="Map">Map</string>
     <string name="annotation">Annotation</string>
+    <string name="updatebutton">update</string>
+    <string name="deletebutton">delete</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="report">New Report</string>
+    <string name="question">You don\'t have an account?</string>
+    <string name="Selectednote">Selected Note</string>
+    <string name="EditReport">Edit Report</string>
+
 </resources>

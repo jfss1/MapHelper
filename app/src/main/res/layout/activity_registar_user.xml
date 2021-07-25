@@ -4,10 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistarUser"
-    android:orientation="vertical">
-
-
+    android:background="@color/orange"
+    android:orientation="vertical"
+    tools:context=".RegistarUser">
 
 
     <EditText
@@ -19,6 +18,7 @@
         android:hint="@string/username"
         android:inputType="textAutoComplete"
         android:minHeight="16dp"
+        android:textColor="@color/buttonLabel"
         android:textSize="18sp" />
 
     <EditText
@@ -30,6 +30,7 @@
         android:hint="@string/password"
         android:inputType="textPassword"
         android:minHeight="16dp"
+        android:textColor="@color/buttonLabel"
         android:textSize="18sp" />
 
     <EditText
@@ -38,9 +39,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:fontFamily="sans-serif-light"
-        android:hint="Email"
+        android:hint="@string/prompt_email"
         android:inputType="textAutoComplete"
         android:minHeight="16dp"
+        android:textColor="@color/buttonLabel"
         android:textSize="18sp" />
 
 
@@ -48,11 +50,12 @@
         android:id="@+id/button_registar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:layout_alignLeft="@id/button_login"
-        android:text="@string/Register"
+        android:layout_margin="16dp"
         android:onClick="register"
-        />
+        android:text="@string/Register"
+        android:textColor="@color/orange"
+        app:backgroundTint="@color/buttonLabel" />
 
 
 </LinearLayout>

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">MapHelper</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="button_save">Gravar</string>
     <string name="add_note">Adicionar nota</string>
     <string name="edit_note">Editar Nota</string>
@@ -37,4 +36,12 @@
     <string name="No_Changes">Nenhuma alteração foi feita</string>
     <string name="Map">Mapa</string>
     <string name="annotation">Anotação</string>
+    <string name="updatebutton">atualizar</string>
+    <string name="deletebutton">eliminar</string>
+    <string name="title">Titulo</string>
+    <string name="description">Descrição</string>
+    <string name="report">Novo Relatório</string>
+    <string name="question">Não tens conta?</string>
+    <string name="Selectednote">Nota Selecionada</string>
+    <string name="EditReport">Editar Relatório</string>
 </resources>
