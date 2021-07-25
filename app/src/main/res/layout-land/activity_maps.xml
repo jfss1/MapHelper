@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="344dp"
+        android:layout_below="@+id/buttonFiltrar"
+        android:layout_marginTop="5dp"
+        tools:context=".MapsActivity" />
+
+    <TextView
+        android:id="@+id/textViewMapsCoordenadas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:background="@color/orange2"
+        android:padding="5dp"
+        android:text="TextView"
+        android:textColor="@color/darkgrey" />
+
+
+    <Button
+        android:id="@+id/buttonFiltrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewMapsCoordenadas"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/buttonFiltrarUser"
+        android:layout_toRightOf="@+id/buttonFiltrarUser"
+        android:text="filter"
+        android:textColor="@color/orange"
+        app:backgroundTint="@color/buttonLabel" />
+
+    <Button
+        android:id="@+id/buttonFiltrarUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewMapsCoordenadas"
+        android:layout_marginStart="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/buttonReset"
+        android:layout_toRightOf="@+id/buttonReset"
+        android:text="my reports"
+        android:textColor="@color/orange"
+        app:backgroundTint="@color/buttonLabel" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewMapsCoordenadas"
+        android:layout_marginTop="5dp"
+        android:text="reset"
+        android:textColor="@color/orange"
+        app:backgroundTint="@color/buttonLabel" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/buttonReportar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/map"
+        android:layout_alignBottom="@id/map"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/ic_baseline_add_24"
+        app:backgroundTint="@color/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button_annotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewMapsCoordenadas"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_toStartOf="@+id/button_login1"
+        android:layout_toLeftOf="@+id/button_login1"
+        android:onClick="onClickAnotacao"
+        android:text="@string/annotation"
+        android:textColor="@color/orange"
+        app:backgroundTint="@color/buttonLabel" />
+
+    <Button
+        android:id="@+id/button_login1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewMapsCoordenadas"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="onClickLogin"
+        android:text="@string/Logout"
+        android:textColor="@color/orange"
+        app:backgroundTint="@color/buttonLabel" />
+
+
+</RelativeLayout>

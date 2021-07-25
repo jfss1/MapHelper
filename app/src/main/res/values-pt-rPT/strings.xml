@@ -22,7 +22,7 @@
     <string name="filter">Perto</string>
     <string name="PersonalNotes">Notas pessoais</string>
     <string name="Settings">Definições</string>
-    <string name="Logout">Sair</string>
+    <string name="Logout">Deslogar</string>
     <string name="Edit_error">Não pode editar essa nota</string>
     <string name="Edit_note">Editar Nota</string>
     <string name="Delete_note">Apagar Nota</string>
